@@ -84,9 +84,26 @@ body{
     transform: translateY(-27px);
 }
 
-.input input:focus + .label label{
+.input input:focus + .label label
+.input input:not(:placeholder-shown) + .label label{
     font-weight: 500;
     color: initial ;
+}
+
+button{
+    padding: 12px 18px;
+    border: none;
+    align-self: flex-start;
+    background-color: #6236ff;
+    color: #fff;
+    border-radius: 12px;
+    transition: 300ms ease;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #f1f1f1;
+    color: #6236ff;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 .label label {
     font-size: 14px;
