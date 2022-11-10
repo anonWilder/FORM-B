@@ -16,4 +16,108 @@ body{
 .sign-up-form{
     display: flex;
     flex-direction: column;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 10px 15px -3px rgb(0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.form-image{
+    display: none;
+}
+.form-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+.form-heading{
+    text-align: center;
+    margin-bottom: 32px;
+}
+.form-heading h1{
+    font-size: 24px;
+    font-weight: bold;
+}
+#logo{
+    width: 90px;
+}
+.form-heading p {
+    font-size: 14px;
+}
+.input-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.input input {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid #181824;
+    font-size: 14px;
+    font-weight: 300;
+    transition: 300ms ease;
+}
+.input input:focus{
+    outline: none;
+    box-shadow: 0 1px 0 0 #6236ff;
+    border-color: #6236ff;
+}
+.label{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 300ms ease ;
+}
+.input input:focus + .label,
+.input input:not(:placeholder-shown) + .label{
+    transform: translateY(-27px);
+}
+
+.input input:focus + .label label{
+    font-weight: 500;
+    color: initial ;
+}
+.label label {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+button:hover{
+    cursor: pointer;
+}
+@media(min-width: 900px){
+    .sign-up-form{
+        flex-direction: row;
+    }
+
+    .form-image{
+        display: block;
+        flex-basis: 45%;
+        background-image: url(../6418665.jpg);
+        border-radius: 12px 0 0 12px;
+    }
+
+    .form-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px 0 0 12px;
+    }
+    .form-heading h1{
+        font-size: 32px;
+    }
+    .form-heading p {
+        font-size: 16px;
+    }
+
 }
